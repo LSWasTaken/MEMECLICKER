@@ -1,15 +1,22 @@
-body {
+html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
 }
 
 .meme-zone {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
   padding: 2rem 1rem;
+  box-sizing: border-box;
   font-family: 'Comic Sans MS', cursive, sans-serif;
   color: #fff;
-  min-height: 100vh;
   background: linear-gradient(-45deg, #ff6ec4, #7873f5, #4facfe, #00f2fe);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
