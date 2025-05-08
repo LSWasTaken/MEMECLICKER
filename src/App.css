@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.meme-zone {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #ff6ec4, #7873f5, #4facfe, #00f2fe);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  position: relative;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.meme-button {
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  background: #fff;
+  color: #000;
+  border: 3px dashed #000;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.meme-button:active {
+  transform: scale(1.1) rotate(-2deg);
+}
+
+.progress-bar {
+  width: 90%;
+  max-width: 400px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  margin: 1rem auto;
+  overflow: hidden;
+  box-shadow: 0 0 5px #fff;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #fff;
+  width: 0%;
+  transition: width 0.2s ease;
+  border-radius: 10px 0 0 10px;
+}
+
+.floating-emoji {
+  position: absolute;
+  font-size: 1.5rem;
+  cursor: crosshair;
+  user-select: none;
+  transition: all 0.2s ease;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
+
+.floating-emoji:hover {
+  transform: scale(0.5) translate(-50%, -50%);
+}
+
+.desc {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 500px) {
+  .meme-button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .floating-emoji {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
